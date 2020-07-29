@@ -67,6 +67,10 @@ for i in config.PublicId:
                            i + offsetValue + (str(offset)) + otherPar)
         res = req.json()
 
+        if "error" in res:
+            time.sleep(1)
+            continue
+
         if (CheckDate(res, currentTime)):
             tmp = SearchSource(res)
 
