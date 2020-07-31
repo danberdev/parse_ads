@@ -1,7 +1,6 @@
 #!/bin/sh
-
-scriptdir="$(dirname $0)"
-cd $0
+DIR="$(dirname "$(readlink -f "$0")")"
+cd $DIR
 
 . ./venv/bin/activate
 ./parse_ads.py
