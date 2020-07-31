@@ -1,3 +1,7 @@
 #!/bin/sh
-. venv/bin/activate
+
+scriptdir="$(dirname $0)"
+cd $0
+
+. ./venv/bin/activate
 ./parse_ads.py
